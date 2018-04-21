@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#88003b" />
+
+  <style>
+    /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+    /* Document
+   ========================================================================== */
+
+    /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+    html {
+      line-height: 1.15;
+      /* 1 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+    }
+
+    /* Sections
+     ========================================================================== */
+
+    /**
+   * Remove the margin in all browsers.
+   */
+
+    body {
+      margin: 0;
+    }
+
+    /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    /* Grouping content
+     ========================================================================== */
+
+    /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+    hr {
+      box-sizing: content-box;
+      /* 1 */
+      height: 0;
+      /* 1 */
+      overflow: visible;
+      /* 2 */
+    }
+
+    /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+    pre {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /* Text-level semantics
+     ========================================================================== */
+
+    /**
+   * Remove the gray background on active links in IE 10.
+   */
+
+    a {
+      background-color: transparent;
+    }
+
+    /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+    abbr[title] {
+      border-bottom: none;
+      /* 1 */
+      text-decoration: underline;
+      /* 2 */
+      text-decoration: underline dotted;
+      /* 2 */
+    }
+
+    /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /**
+   * Add the correct font size in all browsers.
+   */
+
+    small {
+      font-size: 80%;
+    }
+
+    /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    /* Embedded content
+     ========================================================================== */
+
+    /**
+   * Remove the border on images inside links in IE 10.
+   */
+
+    img {
+      border-style: none;
+    }
+
+    /* Forms
+     ========================================================================== */
+
+    /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      /* 1 */
+      font-size: 100%;
+      /* 1 */
+      line-height: 1.15;
+      /* 1 */
+      margin: 0;
+      /* 2 */
+    }
+
+    /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+    button,
+    input {
+      /* 1 */
+      overflow: visible;
+    }
+
+    /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+    button,
+    select {
+      /* 1 */
+      text-transform: none;
+    }
+
+    /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    /**
+   * Remove the inner border and padding in Firefox.
+   */
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    /**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    /**
+   * Correct the padding in Firefox.
+   */
+
+    fieldset {
+      padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+    legend {
+      box-sizing: border-box;
+      /* 1 */
+      color: inherit;
+      /* 2 */
+      display: table;
+      /* 1 */
+      max-width: 100%;
+      /* 1 */
+      padding: 0;
+      /* 3 */
+      white-space: normal;
+      /* 1 */
+    }
+
+    /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+    progress {
+      vertical-align: baseline;
+    }
+
+    /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+    textarea {
+      overflow: auto;
+    }
+
+    /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box;
+      /* 1 */
+      padding: 0;
+      /* 2 */
+    }
+
+    /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+    [type="search"] {
+      -webkit-appearance: textfield;
+      /* 1 */
+      outline-offset: -2px;
+      /* 2 */
+    }
+
+    /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      /* 1 */
+      font: inherit;
+      /* 2 */
+    }
+
+    /* Interactive
+     ========================================================================== */
+
+    /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+    details {
+      display: block;
+    }
+
+    /*
+   * Add the correct display in all browsers.
+   */
+
+    summary {
+      display: list-item;
+    }
+
+    /* Misc
+     ========================================================================== */
+
+    /**
+   * Add the correct display in IE 10+.
+   */
+
+    template {
+      display: none;
+    }
+
+    /**
+   * Add the correct display in IE 10.
+   */
+
+    [hidden] {
+      display: none;
+    }
+
+    /* CSS Document */
+
+    body,
+    html,
+    nav {
+      height: 100%;
+    }
+
+    body,
+    td,
+    th,
+    p {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.8em;
+      line-height: 1.5;
+    }
+
+    body,
+    .inside {
+      background-color: #fff;
+      width: 100%;
+      margin: auto;
+      position: relative;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul,
+    li {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+      color: #333;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    a img {
+      border: none 0px #fff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    article,
+    aside,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    #maincontent,
+    .inside #maincontent,
+      {
+      background-color: #fff;
+      min-height: 100%;
+    }
+
+    footer {
+      background-color: #88003b;
+      color: #fff;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      padding: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      max-width: 100%;
+    }
+
+    /* ====================== Navigation ====================== */
+
+    .main-title {
+      width: 100%;
+      min-width: 2em;
+      background-color: #88003b;
+      color: #fff;
+      text-align: center;
+      z-index: 1;
+      text-align: center;
+      margin: 0 auto;
+      padding: 10px;
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 200;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .main-title a:hover,
+    .main-title a:focus {
+      color: #88003b;
+      background-color: rgb(247, 187, 214);
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+
+    #navigation,
+    .map-button {
+      padding: 10px;
+      display: flex;
+      flex-flow: row nowrap;
+      list-style: none;
+      justify-content: center;
+      background-color: #fff;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    /* Display list items side by side */
+
+    #navigation li {
+      padding: 10px;
+    }
+
+    #navigation li {
+      padding-right: 10px;
+    }
+
+    /* Add a color to all links inside the list */
+
+    #navigation li a,
+    #hidemap {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      background-color: #88003b;
+      border-radius: 5px;
+    }
+
+    /* Add a color on mouse-over */
+
+    #navigation li a:hover,
+    #navigation li a:focus,
+    #hidemap:hover,
+    #hidemap:focus {
+      background-color: rgb(247, 187, 214);
+      color: #000;
+
+    }
+
+    /* ====================== Map ====================== */
+
+    #map,
+    .inside #map {
+      height: 400px;
+      max-width: 100%;
+      background-color: #ccc;
+      border-top: 8px solid #88003b;
+    }
+
+    /* ====================== Restaurant Filtering ====================== */
+
+    .filter-options {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      padding: 10px;
+      background-color: #88003b;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .filter-options h2 {
+      color: white;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1;
+      margin: 0 20px;
+    }
+
+    #neighborhoods-select,
+    #cuisines-select {
+      background-color: white;
+      border: 1px solid #fff;
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      height: 35px;
+      letter-spacing: 0;
+      margin: 10px;
+      padding: 0 10px;
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    #neighborhoods-select:focus,
+    #neighborhoods-select:hover,
+    #cuisines-select:focus,
+    #cuisines-select:hover {
+      -webkit-box-shadow: 0 0 10px rgb(247, 187, 214), 0 0 6px rgb(247, 187, 214);
+      box-shadow: 0 0 10px rgb(247, 187, 214), 0 0 6px rgb(247, 187, 214);
+    }
+
+    /* ========= Restaurant Listing and Reviews Container ========== */
+
+    #restaurants-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      margin: auto;
+      padding: 20px;
+      background-color: #f7bbd6;
+      list-style: none;
+      text-align: center;
+    }
+
+    #restaurants-list li {
+      background-color: #fff;
+      display: flex;
+      flex-flow: column wrap;
+      max-width: 340px;
+      border-radius: 5px;
+      margin: 15px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    #restaurants-list .restaurant-img {
+      border-radius: 5px;
+    }
+
+    #restaurants-list li h2,
+    #restaurant-name {
+      color: #ad034d;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+      letter-spacing: 0;
+      line-height: 1.2;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+
+    #restaurants-list p,
+  #restaurant-address {
+      margin-left: 10px;
+      color: #000;
+      font-size: 1.3em;
+    }
+
+    #restaurants-list li p:nth-child(3) {
+      font-weight: bold;
+    }
+.star {
+  margin: 10px;
+  font-size: 3em;
+}
+.favorite, .unfavorite {
+  background-color: #88003b;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+padding: 5px;
+}
+.unfavorite {
+  background-color: #464444c7;
+  
+}
+.favorite:focus,
+.favorite:hover,
+.unfavorite:focus,
+.unfavorite:hover {
+  background-color: #bad2ea;
+}
+    #restaurants-list li a {
+      background-color: #88003b;
+      border-radius: 5px;
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      margin: auto 10px 10px 10px;
+      color: #fff;
+      display: block;
+      font-size: 1.2em;
+      padding: 8px 30px 10px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    #no-match {
+      min-height: 470px;
+    }
+
+    #no-match h2 {
+      padding-bottom: 30px;
+      text-align: center;
+
+    }
+
+
+    #restaurants-list li a:visited {
+      background-color: #bad2ea;
+    }
+
+    #restaurants-list li a:hover,
+    #restaurants-list li a:focus {
+      -webkit-box-shadow: 0 0 8px #ccc, 0 0 8px #ccc;
+      box-shadow: 0 0 8px #ccc, 0 0 8px #ccc;
+      background-color: rgb(247, 187, 214);
+      color: #88003b;
+
+    }
+
+    #hidemap {
+      border: none;
+    }
+
+    label {
+      color: white;
+      font-size: 1.6em;
+    }
+
+    /* set google maps error message visible*/
+
+    .gm-err-message {
+      color: black;
+    }
+    
+    #map-container {
+      display: none;
+      transition: display 2s;
+    }
+
+    .lazyloaded {
+      display: block;
+
+    }
+
+    /*================Media Queries==========================*/
+
+    @media (min-width: 300px) {
+      #restaurants-list li h2 {
+        font-size: 1.5em;
+      }
+     .main-title a {
+        font-size: 1.6em;
+      }
+    }
+
+    @media (min-width: 500px) {
+      #restaurants-list {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+      }
+     
+      .main-title a {
+        font-size: 1.7em;
+      }
+    }
+
+    @media (min-width: 830px) {
+      .main-title a {
+        font-size: 1.8em;
+      }
+      header {
+        background-image: url("../img/food6-small.jpg");
+        background-color: #bad2ea;
+        min-height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      #restaurants-list li h2 {
+        font-size: 1.7em;
+      }
+     
+      .filter-options {
+        flex-flow: row nowrap;
+      }
+      #neighborhoods-select {
+        margin-right: 30px;
+      }
+     
+    }
+
+    @media (min-width: 1260px) {
+      #reviews-list {
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+      #restaurants-list li {
+        max-width: 300px;
+      }
+      .filter-options {
+        flex-flow: row wrap;
+      }
+      #neighborhoods-select {
+        margin-right: 50px;
+      }
+      header {
+        background-image: url("../img/food6-large.jpg");
+      }
+
+
+    }
+
+    @media (min-width: 1326px) {
+      #goto-map {
+        display: block;
+      }
+    }
+
+    /* Settings for Ultra HD Tv Devices */
+
+    @media (min-width: 2000px) {
+      body {
+        max-width: 2000px;
+        margin: auto;
+      }
+      #maincontent {
+        min-height: auto;
+      }
+    }
+  </style>
+
+<link rel="manifest" href="manifest.json">
+
+<title>Restaurant Reviews</title>
+</head>
+
+<body>
+
+
+  <header>
+
+    <h1 class="main-title">
+      <a href="/">Restaurant Reviews</a>
+    </h1>
+    <nav>
+      <ul id="navigation">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#hidemap" id="toTheMap">Google Map</a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+
+    <section>
+      <div class="filter-options">
+        <label for="neighborhoods-select">Choose Location:</label>
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+
+        <label for="cuisines-select">Choose Couisine:</label>
+        <select id="cuisines-select" name="cuisines" onChange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <ul id="restaurants-list"></ul>
+      <section class="map-button">
+        <button id="hidemap">Click to view map</button>
+      </section>
+
+    </section>
+    <section id="map-container">
+      <div id="map" role="application"></div>
+    </section>
+
+  </main>
+  <footer id="footer">
+    Copyright (c) 2017
+    <a href="/">
+      <strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
+    <br> Header Photo by Brooke Lark on Unsplash
+    <br>
+    <div>Icons made by
+      <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+      <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+        target="_blank">CC 3.0 BY</a>
+    </div>
+
+
+  </footer>
+  <script src="js/idb.js" type="application/javascript" charset="utf-8"></script>
+
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+
+
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function (registration) {
+          console.log('Service Worker registration successful with scope: ',
+            registration.scope);
+        })
+        .catch(function (err) {
+          console.log('Service Worker registration failed: ', err);
+        });
+    }
+  </script>
+
+
+  <script src="js/lazysizes.min.js" async=""></script>
+</body>
+
+</html>

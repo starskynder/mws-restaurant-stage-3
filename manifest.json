@@ -1,0 +1,41 @@
+{
+    "name" : "Restaurant Reviews",
+    "short_name": "R Reviews",
+    "start_url" : "index.html",
+    "scope": ".",
+    "display": "standalone",
+    "background_color" : "#f7bbd6",
+    "theme_color": "#88003b",
+    "description": "Find the Best Restaurant near You",
+    "dir": "ltr",
+    "lang": "en-US",
+    "icons": [{
+        "src": "img/fast-food32png.png",
+        "type": "image/png",
+        "sizes": "32x32"
+    },
+    {
+        "src": "img/fast-food64.png",
+        "type": "image/png",
+        "sizes": "64x64"
+    },
+    {
+        "src": "img/fast-food128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+    },
+    {
+        "src": "img/fast-food256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+    },
+    {
+        "src": "img/fast-food512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }
+
+]
+
+
+}
