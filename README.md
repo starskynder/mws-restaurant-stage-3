@@ -15,7 +15,9 @@ you need to run the server on localhost:1337 or replace this urls minding the __
 1)`http://localhost:1337/restaurants/${id}/?is_favorite=false` <br>
 2) `http://localhost:1337/restaurants/${id}/?is_favorite=true`
 
- 
+ IMPORTANT!
+Both the app and the remote server run on a local machine, so the "sync" event won't fire as on a wi-fi (or lan) connection when the remote server is actually really on the internet. To fire it You need to use Chrome Dev Sync simulator (https://developers.google.com/web/updates/2017/10/devtools-release-notes#sync) with the tag "sync-new-posts" for the comments and "sync-favorites" for the favorite restaurants.
+After the simulator fires the sync, the comments got synced, reloading the page (when online) will show the synced posts.
 
 The Audits folder contains lighthouse report: a json file and an html file.
 
